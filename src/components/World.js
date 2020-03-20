@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import CountUp from 'react-countup';
-
+import { Row,Col, Card } from "react-bootstrap";
 
 export default class World extends Component {
     constructor(props) {
@@ -30,10 +30,65 @@ export default class World extends Component {
     }
     render() {
         return (
-            <div>
-               <h1>Confirmed +ve  Cases : <CountUp end={this.state.confirmed} duration={3} /> </h1>
-                <h1>Confirmed Deaths : <CountUp end={this.state.deaths} duration={3} /></h1>
-                <h1>Confirmed Recoveies: <CountUp end={this.state.recovered} duration={3} /></h1>
+            <div id="world">
+                <Row className="text-center">
+                    {/* Confirmed Cases */}
+                    <Col xs="12" lg md="4"> 
+                        <Card>
+                            <Card.Header><h3>Confirmed</h3></Card.Header>
+                            <Card.Body>
+                                <Card.Text>
+                                    <span className="stats">
+                                    <CountUp end={this.state.confirmed} duration={3}/>
+                                    </span>
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer>
+                                      Gobally
+                                </Card.Footer>
+                        </Card>
+                       
+                        
+                    </Col>
+                    {/* Deaths */}
+                    <Col xs="12" lg md="4"> 
+                        <Card>
+                            <Card.Header><h3>Died</h3></Card.Header>
+                            <Card.Body>
+                                <Card.Text>
+                                    <span className="stats">
+                                    <CountUp end={this.state.deaths} duration={3}/>
+                                    </span>
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer>
+                                   
+                                        Death Ratio : {Math.floor(this.state.deaths / this.state.confirmed * 100) + "%"}
+                                   
+                            </Card.Footer>   
+
+                        </Card>
+                       
+                        
+                    </Col>
+                    {/* Receovery */}
+                    <Col xs="12" lg md="4"> 
+                        <Card>
+                            <Card.Header><h3>Recovered</h3></Card.Header>
+                            <Card.Body>
+                                <Card.Text>
+                                    <span className="stats">
+                                    <CountUp end={this.state.recovered} duration={3}/>
+                                    </span>
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer>
+                                  
+                                        Recovery Rate: {Math.floor(this.state.recovered / this.state.confirmed * 100)+ "%"}
+                            </Card.Footer>
+                        </Card>      
+                    </Col>
+                </Row>
             </div>
         )
     }
