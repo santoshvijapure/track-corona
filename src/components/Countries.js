@@ -94,7 +94,7 @@ export default class Countries extends Component {
                                 </Card.Text>
                             </Card.Body>
                             <Card.Footer>
-                                      In {this.state.current}
+                                      In <b>{this.state.current}</b>
                                 </Card.Footer>
                         </Card>
                        
