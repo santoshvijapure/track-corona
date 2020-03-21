@@ -63,7 +63,7 @@ export default class World extends Component {
                             </Card.Body>
                             <Card.Footer>
                                    
-                                        Death Ratio : {Math.floor(this.state.deaths / this.state.confirmed * 100) + "%"}
+                                        Death Rate : {Math.floor(this.state.deaths / this.state.confirmed * 100) + "%"}
                                    
                             </Card.Footer>   
 

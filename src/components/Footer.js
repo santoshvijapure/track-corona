@@ -14,7 +14,7 @@ export default class Footer extends Component {
                 This data changes rapidly, so what’s shown may be out of date. Table totals may not always represent an accurate sum. Information about reported cases is also available on the World Health Organization site.
                 <br/><b>It doesn’t include all cases</b><br />
                 Confirmed cases aren’t all cases. They only include people who tested positive. Testing rules and availability vary by country.
-                Source
+                
 
             <hr/>
         
