@@ -44,7 +44,7 @@ export default class World extends Component {
                                 </Card.Text>
                             </Card.Body>
                             <Card.Footer>
-                                      Gobally
+                                      Globally
                                 </Card.Footer>
                         </Card>
                        
